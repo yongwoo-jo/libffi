@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "libffi-iOS"
-  spec.version      = "3.3.1-iOS"
+  spec.version      = "3.3.2-iOS"
   spec.summary      = "A portable foreign-function interface library."
 
   # This description is used to generate tags and improve search results.
