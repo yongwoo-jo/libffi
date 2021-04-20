@@ -1,0 +1,16 @@
+PODS:
+  - libffi-iOS (3.3.3-iOS)
+
+DEPENDENCIES:
+  - libffi-iOS (from `../`)
+
+EXTERNAL SOURCES:
+  libffi-iOS:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  libffi-iOS: 1632f67447ca2e848ad2d994b2437beba5b8e31e
+
+PODFILE CHECKSUM: 53ae3dcdeb77e790bd8804f3d79f89ed7744463a
+
+COCOAPODS: 1.9.3

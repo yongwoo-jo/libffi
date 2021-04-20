@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "{darwin_common,darwin_ios}/**/*.{h,c,S}"
+  spec.source_files  = "{darwin_common,darwin_ios}/**/*.{h,c,S,swift}"
   # spec.exclude_files = "Classes/Exclude"
 
   spec.public_header_files = "{darwin_common,darwin_ios}/include/**/*.{h}"
@@ -136,5 +136,5 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
 
   # Fix bug for conflict with system free function.
-  spec.pod_target_xcconfig = {'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) USE_DL_PREFIX=1', 'GCC_WARN_INHIBIT_ALL_WARNINGS' => 'YES', "DEFINES_MODULE" => "YES"}
+  spec.pod_target_xcconfig = {'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) USE_DL_PREFIX=1', 'GCC_WARN_INHIBIT_ALL_WARNINGS' => 'YES'}
 end

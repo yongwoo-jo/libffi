@@ -33,3 +33,5 @@ build_*/
 src/arm/trampoline.S
 **/texinfo.tex
 .DS_Store
+Pods
+xcuserdata
