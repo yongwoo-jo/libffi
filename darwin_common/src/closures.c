@@ -31,9 +31,9 @@
 #define _GNU_SOURCE 1
 #endif
 
-#include <fficonfig.h>
-#include <ffi.h>
-#include <ffi_common.h>
+#include "fficonfig.h"
+#include "ffi.h"
+#include "ffi_common.h"
 
 #ifdef __NetBSD__
 #include <sys/param.h>

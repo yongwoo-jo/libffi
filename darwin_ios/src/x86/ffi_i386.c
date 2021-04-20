@@ -32,8 +32,8 @@
    ----------------------------------------------------------------------- */
 
 #if defined(__i386__) || defined(_M_IX86)
-#include <ffi.h>
-#include <ffi_common.h>
+#include "ffi.h"
+#include "ffi_common.h"
 #include <stdint.h>
 #include <stdlib.h>
 #include "internal.h"

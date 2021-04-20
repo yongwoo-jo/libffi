@@ -31,9 +31,9 @@
    ----------------------------------------------------------------------- */
 
 #if defined(__arm__) || defined(_M_ARM)
-#include <fficonfig.h>
-#include <ffi.h>
-#include <ffi_common.h>
+#include "fficonfig.h"
+#include "ffi.h"
+#include "ffi_common.h"
 #include <stdint.h>
 #include <stdlib.h>
 #include "internal.h"

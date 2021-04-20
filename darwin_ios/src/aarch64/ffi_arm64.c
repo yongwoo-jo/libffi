@@ -25,9 +25,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <fficonfig.h>
-#include <ffi.h>
-#include <ffi_common.h>
+#include "fficonfig.h"
+#include "ffi.h"
+#include "ffi_common.h"
 #include "internal.h"
 #ifdef _M_ARM64
 #include <windows.h> /* FlushInstructionCache */

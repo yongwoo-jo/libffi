@@ -2,9 +2,9 @@
 
 #ifdef __x86_64__
 #define LIBFFI_ASM
-#include <fficonfig.h>
-#include <ffi.h>
-#include <ffi_cfi.h>
+#include "fficonfig.h"
+#include "ffi.h"
+#include "ffi_cfi.h"
 #include "asmnames.h"
 
 #if defined(HAVE_AS_CFI_PSEUDO_OP)

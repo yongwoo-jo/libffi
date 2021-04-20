@@ -29,9 +29,9 @@
 
 #ifdef __arm__
 #define LIBFFI_ASM
-#include <fficonfig.h>
-#include <ffi.h>
-#include <ffi_cfi.h>
+#include "fficonfig.h"
+#include "ffi.h"
+#include "ffi_cfi.h"
 #include "internal.h"
 
 /* GCC 4.8 provides __ARM_ARCH; construct it otherwise.  */

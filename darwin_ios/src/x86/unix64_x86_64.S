@@ -30,8 +30,8 @@
 
 #ifdef __x86_64__
 #define LIBFFI_ASM	
-#include <fficonfig.h>
-#include <ffi.h>
+#include "fficonfig.h"
+#include "ffi.h"
 #include "internal64.h"
 #include "asmnames.h"
 
