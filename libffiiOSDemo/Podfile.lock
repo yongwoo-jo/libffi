@@ -1,5 +1,5 @@
 PODS:
-  - libffi-iOS (3.3.3-iOS)
+  - libffi-iOS (3.3.6-iOS)
 
 DEPENDENCIES:
   - libffi-iOS (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  libffi-iOS: 1632f67447ca2e848ad2d994b2437beba5b8e31e
+  libffi-iOS: 2932b5feac77dc5de0eca4a72269e2c9928a26af
 
 PODFILE CHECKSUM: 53ae3dcdeb77e790bd8804f3d79f89ed7744463a
 
