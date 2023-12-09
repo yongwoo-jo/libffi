@@ -35,3 +35,7 @@ build_*/
 darwin_*/
 src/arm/trampoline.S
 **/texinfo.tex
+Build
+xcuserdata
+Pods
+!Sources/**/*
