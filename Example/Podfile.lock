@@ -1,0 +1,16 @@
+PODS:
+  - libffi-apple (3.4.4)
+
+DEPENDENCIES:
+  - libffi-apple (from `../`)
+
+EXTERNAL SOURCES:
+  libffi-apple:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  libffi-apple: 94a14949cf4594ad5eaacec6a97a6237d3658f25
+
+PODFILE CHECKSUM: abd7a72eb8818d3aed5228ab97265c8fdbcb68a6
+
+COCOAPODS: 1.14.3
