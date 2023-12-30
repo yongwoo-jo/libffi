@@ -15,9 +15,6 @@ depcomp
 doc/libffi.info
 *~
 fficonfig.h.in
-fficonfig.h
-include/ffi.h
-include/ffitarget.h
 install-sh
 libffi.pc
 libtool
@@ -32,7 +29,6 @@ autom4te.cache
 libffi.xcodeproj/xcuserdata
 libffi.xcodeproj/project.xcworkspace
 build_*/
-darwin_*/
 src/arm/trampoline.S
 **/texinfo.tex
 Build
