@@ -12,7 +12,7 @@
 
 readonly SOURCE_DIRECTORIES=("darwin_common" "darwin_ios")
 readonly INTERNAL_HEADER_FILE_NAME="internal.h"
-readonly SOURCES_DIRECTORY="Sources/libffi-iOS"
+readonly SOURCES_DIRECTORY="Sources/libffi"
 
 
 # create Sources directory
