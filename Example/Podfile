@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 def shared_pods
-  pod 'libffi-apple', :path=>'../'
+  pod 'libffi_apple', :path=>'../'
 end
 
 target 'iOSCocoapodsDynamicExample' do

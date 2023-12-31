@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'libffi-apple'
+  s.name             = 'libffi_apple'
   s.version          = '3.4.4'
   s.summary          = 'A portable foreign-function interface library.'
   s.description      = <<-DESC
@@ -17,10 +17,10 @@ Pod::Spec.new do |s|
   s.author           = { "Yanni Wang 王氩" => "wy19900729@gmail.com" }
   s.platforms = { :ios => "12.0", :osx => "10.13" }
   s.source           = { :git => 'https://github.com/623637646/libffi.git', :tag => s.version.to_s }
-  s.source_files = 'Sources/libffi/**/*.{h,c,S}'
-  s.public_header_files = 'Sources/libffi/include/**/*.{h}'
+  s.source_files = 'Sources/libffi_apple/**/*.{h,c,S}'
+  s.public_header_files = 'Sources/libffi_apple/include/**/*.{h}'
   # `'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) USE_DL_PREFIX=1'` is for bug fixing of conflict with system free function. Otherwise encounter crash in unit tests, crash code is `if getMethodWithoutSearchingSuperClasses(targetClass: targetClass, selector: selector) == nil`. Reason is `Thread 1: signal SIGABRT`
-  # `'DEFINES_MODULE' => 'YES'` is for avoid adding `:modular_headers => true` in podfile. Otherwise compile error: `Cannot load underlying module for 'libffi_apple'` for static lib. Or encounter `pod install` error: The Swift pod `EasySwiftHook` depends upon `libffi-apple`, which does not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
+  # `'DEFINES_MODULE' => 'YES'` is for avoid adding `:modular_headers => true` in podfile. Otherwise compile error: `Cannot load underlying module for 'libffi_apple'` for static lib. Or encounter `pod install` error: The Swift pod `EasySwiftHook` depends upon `libffi_apple`, which does not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
   s.pod_target_xcconfig = {'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) USE_DL_PREFIX=1', 'DEFINES_MODULE' => 'YES'}
 end
 

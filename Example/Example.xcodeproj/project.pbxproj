@@ -49,8 +49,7 @@
 		A000D6662B40730300AECDCF /* LibffiSwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000D6632B40730300AECDCF /* LibffiSwiftTest.swift */; };
 		A000D6672B40730300AECDCF /* RunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000D6642B40730300AECDCF /* RunTests.swift */; };
 		A000D6682B40730300AECDCF /* LibffiObjectiveCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A000D6652B40730300AECDCF /* LibffiObjectiveCTest.m */; };
-		A000D66B2B4073C100AECDCF /* libffi in Frameworks */ = {isa = PBXBuildFile; productRef = A000D66A2B4073C100AECDCF /* libffi */; };
-		A000D66E2B4079F300AECDCF /* libffi in Frameworks */ = {isa = PBXBuildFile; productRef = A000D66D2B4079F300AECDCF /* libffi */; };
+		A09334A92B41518700DA9FA0 /* libffi_apple in Frameworks */ = {isa = PBXBuildFile; productRef = A09334A82B41518700DA9FA0 /* libffi_apple */; };
 		E0769F7ED831A93EA32B980D /* Pods_iOSCocoapodsDynamicExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D276C13FFCDBA9B827D21A98 /* Pods_iOSCocoapodsDynamicExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -168,8 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A000D66E2B4079F300AECDCF /* libffi in Frameworks */,
-				A000D66B2B4073C100AECDCF /* libffi in Frameworks */,
+				A09334A92B41518700DA9FA0 /* libffi_apple in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +337,7 @@
 				A000D5D82B406FEA00AECDCF /* Sources */,
 				A000D5D92B406FEA00AECDCF /* Frameworks */,
 				A000D5DA2B406FEA00AECDCF /* Resources */,
-				7B0AAD446B603F853C4527B1 /* [CP] Embed Pods Frameworks */,
+				2434701A558D107A81997FAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -376,7 +374,7 @@
 				A000D6182B40714200AECDCF /* Sources */,
 				A000D6192B40714200AECDCF /* Frameworks */,
 				A000D61A2B40714200AECDCF /* Resources */,
-				15E11A4D1EAFB711671D4020 /* [CP] Embed Pods Frameworks */,
+				6792530B11CC2081FF668E3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,8 +417,7 @@
 			);
 			name = SPMExample;
 			packageProductDependencies = (
-				A000D66A2B4073C100AECDCF /* libffi */,
-				A000D66D2B4079F300AECDCF /* libffi */,
+				A09334A82B41518700DA9FA0 /* libffi_apple */,
 			);
 			productName = SPMExample;
 			productReference = A000D6522B4072F400AECDCF /* SPMExample.app */;
@@ -468,7 +465,7 @@
 			);
 			mainGroup = A000D5762B4067AD00AECDCF;
 			packageReferences = (
-				A000D66C2B4079F300AECDCF /* XCLocalSwiftPackageReference ".." */,
+				A09334A72B41518700DA9FA0 /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = A000D5802B4067AD00AECDCF /* Products */;
 			projectDirPath = "";
@@ -578,24 +575,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		15E11A4D1EAFB711671D4020 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MacCocoapodsDynamicExample/Pods-MacCocoapodsDynamicExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MacCocoapodsDynamicExample/Pods-MacCocoapodsDynamicExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacCocoapodsDynamicExample/Pods-MacCocoapodsDynamicExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B0AAD446B603F853C4527B1 /* [CP] Embed Pods Frameworks */ = {
+		2434701A558D107A81997FAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -610,6 +590,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSCocoapodsDynamicExample/Pods-iOSCocoapodsDynamicExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6792530B11CC2081FF668E3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacCocoapodsDynamicExample/Pods-MacCocoapodsDynamicExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacCocoapodsDynamicExample/Pods-MacCocoapodsDynamicExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacCocoapodsDynamicExample/Pods-MacCocoapodsDynamicExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		98D411ACE45A54CB40CA61A8 /* [CP] Check Pods Manifest.lock */ = {
@@ -1181,7 +1178,6 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12;
 				MARKETING_VERSION = 1.0;
-				OTHER_SWIFT_FLAGS = "-DSPM";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanni.SPMExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1224,7 +1220,6 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12;
 				MARKETING_VERSION = 1.0;
-				OTHER_SWIFT_FLAGS = "-DSPM";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanni.SPMExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1296,20 +1291,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		A000D66C2B4079F300AECDCF /* XCLocalSwiftPackageReference ".." */ = {
+		A09334A72B41518700DA9FA0 /* XCLocalSwiftPackageReference ".." */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ..;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A000D66A2B4073C100AECDCF /* libffi */ = {
+		A09334A82B41518700DA9FA0 /* libffi_apple */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = libffi;
-		};
-		A000D66D2B4079F300AECDCF /* libffi */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = libffi;
+			productName = libffi_apple;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

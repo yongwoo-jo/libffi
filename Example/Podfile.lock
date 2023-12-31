@@ -1,16 +1,16 @@
 PODS:
-  - libffi-apple (3.4.4)
+  - libffi_apple (3.4.4)
 
 DEPENDENCIES:
-  - libffi-apple (from `../`)
+  - libffi_apple (from `../`)
 
 EXTERNAL SOURCES:
-  libffi-apple:
+  libffi_apple:
     :path: "../"
 
 SPEC CHECKSUMS:
-  libffi-apple: 94a14949cf4594ad5eaacec6a97a6237d3658f25
+  libffi_apple: 6e58d4f9faa5111041891ec03d4df8ece1d02f9c
 
-PODFILE CHECKSUM: abd7a72eb8818d3aed5228ab97265c8fdbcb68a6
+PODFILE CHECKSUM: ec27ecae41094cce3d8658e5498b738cef6a82bf
 
 COCOAPODS: 1.14.3

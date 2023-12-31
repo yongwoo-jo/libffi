@@ -6,11 +6,7 @@
 //
 
 import Foundation
-#if SPM
-import libffi
-#else
 import libffi_apple
-#endif
 
 // MARK: call
 
