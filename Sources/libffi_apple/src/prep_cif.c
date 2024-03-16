@@ -26,7 +26,7 @@
 
 #include "ffi.h"
 #include "ffi_common.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 /* Round up to FFI_SIZEOF_ARG. */
 

@@ -34,8 +34,8 @@
 #if defined(__i386__) || defined(_M_IX86)
 #include "ffi.h"
 #include "ffi_common.h"
-#include "stdint.h"
-#include "stdlib.h"
+#include <stdint.h>
+#include <stdlib.h>
 #include "tramp.h"
 #include "x86_internal.h"
 

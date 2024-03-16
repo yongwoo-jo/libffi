@@ -24,8 +24,8 @@
 
 #include "ffi.h"
 #include "ffi_common.h"
-#include "stdlib.h"
-#include "stdio.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /* General debugging routines */
 

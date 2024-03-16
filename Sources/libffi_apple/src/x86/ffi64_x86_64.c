@@ -32,9 +32,9 @@
 #include "ffi.h"
 #include "ffi_common.h"
 
-#include "stdlib.h"
-#include "stdarg.h"
-#include "stdint.h"
+#include <stdlib.h>
+#include <stdarg.h>
+#include <stdint.h>
 #include "tramp.h"
 #include "internal64.h"
 
@@ -48,7 +48,7 @@
 #define UINT128 __m128
 #else
 #if defined(__SUNPRO_C)
-#include "sunmedia_types.h"
+#include <sunmedia_types.h>
 #define UINT128 __m128i
 #else
 #define UINT128 __int128_t

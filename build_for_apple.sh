@@ -15,6 +15,45 @@ readonly INTERNAL_HEADER_FILE_NAME="internal.h"
 readonly SOURCES_DIRECTORY="Sources/libffi_apple"
 
 
+
+
+###################### Get libffi header names for regular #########################################################
+
+
+
+# libffi header names
+libffi_header_names=()
+
+# Create a temporary file
+temp_file=$(mktemp)
+
+# Traverse the directories and their subdirectories
+for dir in "${SOURCE_DIRECTORIES[@]}"; do
+    find "$dir" -type f -name "*.h" -print0 >> "$temp_file"
+done
+
+# Process the temporary file to add file names to the Set
+while IFS= read -r -d '' file; do
+    # Get the file name and add it to the Set
+    filename=$(basename "$file")
+    filename=${filename%.*}
+    libffi_header_names+=("$filename")
+done < "$temp_file"
+
+# Clean up the temporary file
+rm "$temp_file"
+
+libffi_header_names_joined=$(printf "|%s" "${libffi_header_names[@]}")
+libffi_header_names_joined=${libffi_header_names_joined:1}
+
+
+
+############################## Prepare Directories #########################################
+
+
+
+
+
 # create Sources directory
 if [ ! -d "$SOURCES_DIRECTORY" ]; then
   mkdir -p "$SOURCES_DIRECTORY"
@@ -28,6 +67,8 @@ for dir in "${SOURCE_DIRECTORIES[@]}"; do
   cp -r $dir $SOURCES_DIRECTORY
 done
 
+
+################################ Process  ###############################################
 
 
 # This script recursively searches for files
@@ -48,7 +89,7 @@ process_files() {
 
       # changes all C language #include <> statements to #include "" using regular expressions.
       # rename code internal.h to {architecture}_internal.h to fix duplicate definition error.
-      sed -i '' -e 's/#include <\(.*\.h\)>/#include "\1"/g' -e "s/#include \"$INTERNAL_HEADER_FILE_NAME\"/#include \"$parent_folder_name\_$INTERNAL_HEADER_FILE_NAME\"/g" "$file"
+      sed -i '' -E -e "s/#include <($libffi_header_names_joined)\.h>/#include \"\1.h\"/g" -E -e "s/#include \"$INTERNAL_HEADER_FILE_NAME\"/#include \"$parent_folder_name\_$INTERNAL_HEADER_FILE_NAME\"/g" "$file"
       echo "Modified file: $file"
 
       # rename file name from internal.h to {architecture}_internal.h to fix duplicate definition error.
@@ -64,6 +105,8 @@ for dir in "${SOURCES_DIRECTORY[@]}"; do
   process_files "$dir"
 done
 
+
+##############################  Merge  #################################################
 
 
 # Merge code

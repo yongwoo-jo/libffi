@@ -37,17 +37,17 @@
 #include "tramp.h"
 
 #ifdef __NetBSD__
-#include "sys/param.h"
+#include <sys/param.h>
 #endif
 
 #if __NetBSD_Version__ - 0 >= 799007200
 /* NetBSD with PROT_MPROTECT */
-#include "sys/mman.h"
+#include <sys/mman.h>
 
-#include "stddef.h"
-#include "unistd.h"
+#include <stddef.h>
+#include <unistd.h>
 #ifdef  HAVE_SYS_MEMFD_H
-#include "sys/memfd.h"
+#include <sys/memfd.h>
 #endif
 
 static const size_t overhead =
@@ -160,13 +160,13 @@ ffi_tramp_is_present (__attribute__((unused)) void *ptr)
 
 #ifdef __MACH__
 
-#include "mach/mach.h"
-#include "pthread.h"
+#include <mach/mach.h>
+#include <pthread.h>
 #ifdef HAVE_PTRAUTH
-#include "ptrauth.h"
+#include <ptrauth.h>
 #endif
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 extern void *ffi_closure_trampoline_table_page;
 
@@ -413,30 +413,30 @@ ffi_closure_free (void *ptr)
 /* Don't allocate more than a page unless needed.  */
 #define DEFAULT_GRANULARITY ((size_t)malloc_getpagesize)
 
-#include "sys/types.h"
-#include "sys/stat.h"
-#include "fcntl.h"
-#include "errno.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <errno.h>
 #ifndef _MSC_VER
-#include "unistd.h"
+#include <unistd.h>
 #endif
-#include "string.h"
-#include "stdio.h"
+#include <string.h>
+#include <stdio.h>
 #if !defined(_WIN32)
 #ifdef HAVE_MNTENT
-#include "mntent.h"
+#include <mntent.h>
 #endif /* HAVE_MNTENT */
-#include "sys/param.h"
-#include "pthread.h"
+#include <sys/param.h>
+#include <pthread.h>
 
 /* We don't want sys/mman.h to be included after we redefine mmap and
    dlmunmap.  */
-#include "sys/mman.h"
+#include <sys/mman.h>
 #define LACKS_SYS_MMAN_H 1
 
 #if FFI_MMAP_EXEC_SELINUX
-#include "sys/statfs.h"
-#include "stdlib.h"
+#include <sys/statfs.h>
+#include <stdlib.h>
 
 static int selinux_enabled = -1;
 
@@ -485,7 +485,7 @@ selinux_enabled_check (void)
 
 /* On PaX enable kernels that have MPROTECT enabled we can't use PROT_EXEC. */
 #if defined FFI_MMAP_PAX
-#include "stdlib.h"
+#include <stdlib.h>
 
 enum {
   PAX_MPROTECT = (1 << 0),
@@ -529,7 +529,7 @@ pax_flags_check (void)
 
 #elif defined (__CYGWIN__) || defined(__INTERIX)
 
-#include "sys/mman.h"
+#include <sys/mman.h>
 
 /* Cygwin is Linux-like, but not quite that Linux-like.  */
 #define is_selinux_enabled() 0
@@ -1065,7 +1065,7 @@ ffi_tramp_is_present (void *ptr)
 /* On many systems, memory returned by malloc is writable and
    executable, so just use it.  */
 
-#include "stdlib.h"
+#include <stdlib.h>
 
 void *
 ffi_closure_alloc (size_t size, void **code)

@@ -22,15 +22,15 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
 
 #if defined(__aarch64__) || defined(__arm64__)|| defined (_M_ARM64)
-#include "stdio.h"
-#include "stdlib.h"
-#include "stdint.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include "fficonfig.h"
 #include "ffi.h"
 #include "ffi_common.h"
 #include "aarch64_internal.h"
 #ifdef _WIN32
-#include "windows.h" /* FlushInstructionCache */
+#include <windows.h> /* FlushInstructionCache */
 #endif
 #include "tramp.h"
 
@@ -66,9 +66,9 @@ struct call_context
 
 #ifdef __MACH__
 #ifdef HAVE_PTRAUTH
-#include "ptrauth.h"
+#include <ptrauth.h>
 #endif
-#include "mach/vm_param.h"
+#include <mach/vm_param.h>
 #endif
 
 #else

@@ -450,7 +450,7 @@ DEFAULT_MMAP_THRESHOLD       default: 256K
 #endif  /* WIN32 */
 #ifdef WIN32
 #define WIN32_LEAN_AND_MEAN
-#include "windows.h"
+#include <windows.h>
 #define HAVE_MMAP 1
 #define HAVE_MORECORE 0
 #define LACKS_UNISTD_H
@@ -466,7 +466,7 @@ DEFAULT_MMAP_THRESHOLD       default: 256K
 
 #ifdef __OS2__
 #define INCL_DOS
-#include "os2.h"
+#include <os2.h>
 #define HAVE_MMAP 1
 #define HAVE_MORECORE 0
 #define LACKS_SYS_MMAN_H
@@ -481,7 +481,7 @@ DEFAULT_MMAP_THRESHOLD       default: 256K
 #endif  /* DARWIN */
 
 #ifndef LACKS_SYS_TYPES_H
-#include "sys/types.h"  /* For size_t */
+#include <sys/types.h>  /* For size_t */
 #endif  /* LACKS_SYS_TYPES_H */
 
 /* The maximum possible size_t value has all bits set */
@@ -1165,45 +1165,45 @@ int mspace_mallopt(int, int);
 #pragma warning( disable : 4146 ) /* no "unsigned" warnings */
 #endif /* _MSC_VER */
 
-#include "stdio.h"       /* for printing in malloc_stats */
+#include <stdio.h>       /* for printing in malloc_stats */
 
 #ifndef LACKS_ERRNO_H
-#include "errno.h"       /* for MALLOC_FAILURE_ACTION */
+#include <errno.h>       /* for MALLOC_FAILURE_ACTION */
 #endif /* LACKS_ERRNO_H */
 #if FOOTERS
-#include "time.h"        /* for magic initialization */
+#include <time.h>        /* for magic initialization */
 #endif /* FOOTERS */
 #ifndef LACKS_STDLIB_H
-#include "stdlib.h"      /* for abort() */
+#include <stdlib.h>      /* for abort() */
 #endif /* LACKS_STDLIB_H */
 #ifdef DEBUG
 #if ABORT_ON_ASSERT_FAILURE
 #define assert(x) if(!(x)) ABORT
 #else /* ABORT_ON_ASSERT_FAILURE */
-#include "assert.h"
+#include <assert.h>
 #endif /* ABORT_ON_ASSERT_FAILURE */
 #else  /* DEBUG */
 #define assert(x)
 #endif /* DEBUG */
 #ifndef LACKS_STRING_H
-#include "string.h"      /* for memset etc */
+#include <string.h>      /* for memset etc */
 #endif  /* LACKS_STRING_H */
 #if USE_BUILTIN_FFS
 #ifndef LACKS_STRINGS_H
-#include "strings.h"     /* for ffs */
+#include <strings.h>     /* for ffs */
 #endif /* LACKS_STRINGS_H */
 #endif /* USE_BUILTIN_FFS */
 #if HAVE_MMAP
 #ifndef LACKS_SYS_MMAN_H
-#include "sys/mman.h"    /* for mmap */
+#include <sys/mman.h>    /* for mmap */
 #endif /* LACKS_SYS_MMAN_H */
 #ifndef LACKS_FCNTL_H
-#include "fcntl.h"
+#include <fcntl.h>
 #endif /* LACKS_FCNTL_H */
 #endif /* HAVE_MMAP */
 #if HAVE_MORECORE
 #ifndef LACKS_UNISTD_H
-#include "unistd.h"     /* for sbrk */
+#include <unistd.h>     /* for sbrk */
 #else /* LACKS_UNISTD_H */
 #if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
 extern void*     sbrk(ptrdiff_t);
@@ -1446,7 +1446,7 @@ static int win32munmap(void* ptr, size_t size) {
 
 #if !defined(WIN32) && !defined(__OS2__)
 /* By default use posix locks */
-#include "pthread.h"
+#include <pthread.h>
 #define MLOCK_T pthread_mutex_t
 #define INITIAL_LOCK(l)      pthread_mutex_init(l, NULL)
 #define ACQUIRE_LOCK(l)      pthread_mutex_lock(l)

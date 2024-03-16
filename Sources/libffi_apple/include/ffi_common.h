@@ -78,7 +78,7 @@ char *alloca ();
 #endif
 
 #if defined(FFI_DEBUG)
-#include "stdio.h"
+#include <stdio.h>
 #endif
 
 #ifdef FFI_DEBUG

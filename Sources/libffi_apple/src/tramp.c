@@ -39,20 +39,20 @@
 #ifdef __linux__
 #define _GNU_SOURCE 1
 #endif
-#include "stdio.h"
-#include "unistd.h"
-#include "stdlib.h"
-#include "stdint.h"
-#include "fcntl.h"
-#include "pthread.h"
-#include "sys/mman.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <fcntl.h>
+#include <pthread.h>
+#include <sys/mman.h>
 #include "tramp.h"
 #ifdef __linux__
-#include "linux/limits.h"
-#include "linux/types.h"
+#include <linux/limits.h>
+#include <linux/types.h>
 #endif
 #ifdef __CYGWIN__
-#include "limits.h"
+#include <limits.h>
 #endif
 #endif
 
@@ -676,7 +676,7 @@ ffi_tramp_free (void *arg)
 
 #else /* !FFI_EXEC_STATIC_TRAMP */
 
-#include "stddef.h"
+#include <stddef.h>
 
 int
 ffi_tramp_is_supported(void)

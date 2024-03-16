@@ -34,20 +34,20 @@
 #include "fficonfig.h"
 #include "ffi.h"
 #include "ffi_common.h"
-#include "stdint.h"
-#include "stdlib.h"
+#include <stdint.h>
+#include <stdlib.h>
 #include "tramp.h"
 #include "arm_internal.h"
 
 #if defined(_WIN32)
 #define WIN32_LEAN_AND_MEAN
-#include "windows.h"
+#include <windows.h>
 #endif
 
 #if FFI_EXEC_TRAMPOLINE_TABLE
 
 #ifdef __MACH__
-#include "mach/machine/vm_param.h"
+#include <mach/machine/vm_param.h>
 #endif
 
 #else
@@ -62,12 +62,12 @@ extern unsigned char ffi_arm_trampoline[12] FFI_HIDDEN;
 #endif
 
 #if defined(__FreeBSD__) && defined(__arm__)
-#include "sys/types.h"
-#include "machine/sysarch.h"
+#include <sys/types.h>
+#include <machine/sysarch.h>
 #endif
 
 #if defined(__QNX__)
-#include "sys/mman.h"
+#include <sys/mman.h>
 #endif
 
 /* Forward declares. */

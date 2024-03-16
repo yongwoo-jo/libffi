@@ -37,7 +37,7 @@
 
 #include "ffi.h"
 #include "ffi_common.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 #if !defined(NO_JAVA_RAW_API)
 

@@ -29,7 +29,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
 #include "aarch64_internal.h"
 
 #ifdef HAVE_MACHINE_ASM_H
-#include "machine/asm.h"
+#include <machine/asm.h>
 #else
 #ifdef __USER_LABEL_PREFIX__
 #define CONCAT1(a, b) CONCAT2(a, b)
@@ -457,7 +457,7 @@ CNAME(trampoline_code_table):
 #if FFI_EXEC_TRAMPOLINE_TABLE
 
 #ifdef __MACH__
-#include "mach/machine/vm_param.h"
+#include <mach/machine/vm_param.h>
     .align PAGE_MAX_SHIFT
 CNAME(ffi_closure_trampoline_table_page):
     .rept PAGE_MAX_SIZE / FFI_TRAMPOLINE_SIZE

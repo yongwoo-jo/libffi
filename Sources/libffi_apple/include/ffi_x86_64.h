@@ -91,8 +91,8 @@ extern "C" {
 #define __attribute__(X)
 #endif
 
-#include "stddef.h"
-#include "limits.h"
+#include <stddef.h>
+#include <limits.h>
 
 /* LONG_LONG_MAX is not always defined (not if STRICT_ANSI, for example).
    But we can find it either under the correct ANSI name, or under GNU
