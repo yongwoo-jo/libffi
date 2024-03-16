@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'libffi_apple'
-  s.version          = '3.4.4'
+  s.version          = '3.4.4.1'
   s.summary          = 'A portable foreign-function interface library.'
   s.description      = <<-DESC
   Compilers for high level languages generate code that follow certain conventions. These conventions are necessary, in part, for separate compilation to work. One such convention is the "calling convention". The "calling convention" is essentially a set of assumptions made by the compiler about where function arguments will be found on entry to a function. A "calling convention" also specifies where the return value for a function is found.
